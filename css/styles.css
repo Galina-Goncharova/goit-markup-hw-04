@@ -113,6 +113,8 @@ body {
 }
 
 .contact-header {
+  display: inline-flex;
+  align-items: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -138,9 +140,10 @@ body {
   border-bottom: 1px solid #ececec;
 }
 
-.contact-icon {
+.icon-header {
   margin-right: 10px;
   fill: currentColor;
+  align-items: center;
 }
 /* ------------HERO----------- */
 
@@ -347,34 +350,51 @@ body {
 
 .clients-list {
   display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.client-item {
+  width: 170px;
+  height: 90px;
 }
 
 .client-item:not(:last-child) {
   margin-right: 30px;
 }
 
-.clients-icon-box {
-}
-
 .client-link {
-  display: inline-block;
   width: 170px;
-  height: 92px;
-  border: 1px;
-  border-radius: 4px;
-  border-color: var(--color-icon);
+  height: 90px;
+  display: block;
+  border: 1px solid #afb1b8;
+  color: #afb1b8;
+  background-color: #fff;
+  padding: 16px 32px;
 }
 
-.clients-icon {
-  width: 106px;
-  height: 60px;
+.client-link:hover,
+.client-link:focus {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
-/* .client-item + .client-item {
-  margin-right: 30px;
-} */
+.client-icon {
+  fill: var(--color-icon);
+}
 
+.client-icon:hover,
+.client-icon:focus {
+  fill: var(--accent-color);
+}
 /* ------------FOOTER----------- */
+
+.footer-flex {
+  display: flex;
+}
 
 .logo-footer {
   display: inline-block;
@@ -417,10 +437,37 @@ body {
   color: var(--accent-color);
 }
 
+.footer-social-items {
+  flex-direction: row;
+  justify-content: center;
+}
+
+.footer-social {
+  margin-left: 70px;
+}
+
+.footer-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-top: 12px;
+  color: var(--primary-title-color);
+}
+
 .footer {
   background-color: var(--background-color-footer);
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.social-link-footer {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.social-link-footer .social-icon {
+  fill: var(--primary-title-color);
 }
 
 /* ------------PORTFOLIO----------- */
